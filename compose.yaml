@@ -6,6 +6,8 @@ services:
      context: ./backend
      dockerfile: Dockerfile
     container_name: proj_backend
+    environment:
+      - MONGO_URI=mongodb://admin:password@mongodb
     ports:
       - "5000:4000"
     depends_on:
